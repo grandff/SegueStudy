@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kU2-rG-R2e">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Perform Segue View Controller-->
+        <scene sceneID="v7Q-65-7zA">
+            <objects>
+                <viewController id="kU2-rG-R2e" customClass="PerformSegueViewController" customModule="SegueStudy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SDj-N4-UAP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="83" translatesAutoresizingMaskIntoConstraints="NO" id="V2k-zA-4GH">
+                                <rect key="frame" x="141.5" y="302" width="131" height="292"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="hMR-Jm-qWT">
+                                        <rect key="frame" x="21.5" y="0.0" width="88" height="110"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F1W-wb-eMt">
+                                                <rect key="frame" x="0.0" y="0.0" width="88" height="30"/>
+                                                <state key="normal" title="From Trigger"/>
+                                                <connections>
+                                                    <segue destination="O1A-lP-kfB" kind="show" identifier="triggerSegue" id="6jB-93-pft"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdY-H6-lk6">
+                                                <rect key="frame" x="0.0" y="80" width="88" height="30"/>
+                                                <state key="normal" title="From Code"/>
+                                                <connections>
+                                                    <action selector="perform:" destination="kU2-rG-R2e" eventType="touchUpInside" id="jZX-8s-pKH"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="nt2-mM-DzD">
+                                        <rect key="frame" x="0.0" y="193" width="131" height="99"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eOL-ZV-UKo">
+                                                <rect key="frame" x="0.0" y="0.0" width="131" height="31"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Granted" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4e-7G-hNH">
+                                                        <rect key="frame" x="0.0" y="0.0" width="62" height="31"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dSL-JN-Bsd">
+                                                        <rect key="frame" x="82" y="0.0" width="51" height="31"/>
+                                                    </switch>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3O-vl-F5k">
+                                                <rect key="frame" x="0.0" y="69" width="131" height="30"/>
+                                                <state key="normal" title="Push"/>
+                                                <connections>
+                                                    <segue destination="O1A-lP-kfB" kind="show" identifier="pushSegue" id="s3Q-UH-5XI"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="V2k-zA-4GH" firstAttribute="centerY" secondItem="SDj-N4-UAP" secondAttribute="centerY" id="bsv-Ab-vWN"/>
+                            <constraint firstItem="V2k-zA-4GH" firstAttribute="centerX" secondItem="SDj-N4-UAP" secondAttribute="centerX" id="nrl-j4-MoK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gfc-20-4D5"/>
+                    </view>
+                    <connections>
+                        <outlet property="grantedSwitch" destination="dSL-JN-Bsd" id="oVO-Sh-J5v"/>
+                        <segue destination="O1A-lP-kfB" kind="show" identifier="manualSegue" id="uEx-xG-bS2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rE8-3l-fLG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-22" y="101"/>
+        </scene>
+        <!--Message View Controller-->
+        <scene sceneID="rul-gd-kyX">
+            <objects>
+                <viewController id="O1A-lP-kfB" customClass="MessageViewController" customModule="SegueStudy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XPV-gV-jEi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tRu-bT-d7W">
+                                <rect key="frame" x="186" y="410.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="tRu-bT-d7W" firstAttribute="centerY" secondItem="XPV-gV-jEi" secondAttribute="centerY" id="vGn-ca-Tzn"/>
+                            <constraint firstItem="tRu-bT-d7W" firstAttribute="centerX" secondItem="XPV-gV-jEi" secondAttribute="centerX" id="xfw-le-nnI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XRf-F4-kXy"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5PG-uu-yDq"/>
+                    <connections>
+                        <outlet property="labelName" destination="tRu-bT-d7W" id="V9j-mB-wR5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uH4-7e-7fK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="887" y="100"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="s3Q-UH-5XI"/>
+    </inferredMetricsTieBreakers>
+</document>
